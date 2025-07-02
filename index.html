@@ -161,20 +161,25 @@
             margin-top: 2rem;
         }
 
-        .refresh-button {
-            background: var(--accent-color);
-            color: white;
-            border: none;
-            padding: 0.8rem 1.5rem;
-            border-radius: 6px;
-            font-size: 1rem;
-            cursor: pointer;
-            margin-top: 2rem;
-            transition: all var(--transition-speed) ease;
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
+           .button-container {
+        display: flex;
+        justify-content: center;
+        margin-top: 2rem;
+    }
+
+    .refresh-button {
+        background: var(--accent-color);
+        color: white;
+        border: none;
+        padding: 0.8rem 1.5rem;
+        border-radius: 6px;
+        font-size: 1rem;
+        cursor: pointer;
+        transition: all var(--transition-speed) ease;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+    }
 
         .refresh-button:hover {
             background: #2a75e6;
@@ -249,11 +254,12 @@
                     <span class="info-value">WSFE Service</span>
                 </div>
             </div>
-
-            <button class="refresh-button" id="refreshBtn">
-                <span id="refreshText">Actualizar ahora</span>
-                <span class="loading" id="refreshSpinner" style="display: center;"></span>
-            </button>
+<div class="button-container">
+    <button class="refresh-button" id="refreshBtn">
+        <span id="refreshText">Actualizar ahora</span>
+        <span class="loading" id="refreshSpinner" style="display: none;"></span>
+    </button>
+</div>
 
             <div class="legal-notice">
                 <strong>Aviso Legal</strong>
